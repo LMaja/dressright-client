@@ -12,7 +12,7 @@ const BODY_SHAPES = [
 ];
 
 const WORKPLACES = [
-  { id: "corporate", label: "Corporate / Finance", icon: "🏦" },
+  { id: "corporate", label: "Corporate", icon: "🏦" },
   { id: "business_casual", label: "Business Casual", icon: "💼" },
   { id: "creative", label: "Creative / Media", icon: "🎨" },
   { id: "tech", label: "Tech / Startup", icon: "💻" },
@@ -33,7 +33,8 @@ const GENDERS = [
   { id: "androgynous", label: "Androgynous / Neutral" },
 ];
 
-const API_URL = "http://localhost:5000";
+
+const API_URL = "https://dressright-server.onrender.com";
 
 const STORES = [
   { name: "SHEIN", logo: "S", color: "#000", commission: "10% commission", url: "https://www.shein.com/search?q=" },
