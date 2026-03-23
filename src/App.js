@@ -1,23 +1,47 @@
 import { useState } from "react";
 import LandingPage from "./Landingpage";
 
-const BODY_SHAPES = [
-  { id: "hourglass", label: "Hourglass", icon: "⧗", desc: "Balanced bust & hips, defined waist" },
-  { id: "pear", label: "Pear", icon: "🍐", desc: "Hips wider than shoulders" },
-  { id: "apple", label: "Apple", icon: "🍎", desc: "Fuller midsection, slimmer legs" },
-  { id: "rectangle", label: "Rectangle", icon: "▭", desc: "Similar bust, waist & hip width" },
-  { id: "inverted_triangle", label: "Inverted Triangle", icon: "▽", desc: "Broader shoulders, narrower hips" },
-  { id: "plus_size", label: "Plus Size", icon: "🌸", desc: "Fuller figure, size 16 and above" },
-  { id: "custom", label: "None of these fit me", icon: "✏️", desc: "Describe your body shape in your own words" },
+const BODY_SHAPES_FEMININE = [
+  { id: "hourglass", label: "Hourglass", desc: "Balanced bust & hips, defined waist", icon: "⧗" },
+  { id: "pear", label: "Pear", desc: "Hips wider than shoulders", icon: "🍐" },
+  { id: "apple", label: "Apple", desc: "Fuller midsection, slimmer legs", icon: "🍎" },
+  { id: "rectangle", label: "Rectangle", desc: "Similar bust, waist & hip width", icon: "▭" },
+  { id: "inverted_triangle", label: "Inverted Triangle", desc: "Broader shoulders, narrower hips", icon: "▽" },
+  { id: "plus_size", label: "Plus Size", desc: "Fuller figure, size 16 and above", icon: "🌸" },
+  { id: "custom", label: "None of these fit me", desc: "Describe your body shape in your own words", icon: "✏️" },
 ];
 
+const BODY_SHAPES_MASCULINE = [
+  { id: "trapezoid", label: "Trapezoid", desc: "Broad shoulders, slight waist, medium hips — ideal male shape", icon: "📐" },
+  { id: "rectangle", label: "Rectangle", desc: "Shoulders, waist and hips similar width, athletic build", icon: "▭" },
+  { id: "inverted_triangle", label: "Inverted Triangle", desc: "Very broad shoulders, narrow waist and hips", icon: "▽" },
+  { id: "triangle", label: "Triangle", desc: "Narrower shoulders, wider hips and thighs", icon: "△" },
+  { id: "oval", label: "Oval", desc: "Fuller midsection, broader waist, rounder belly", icon: "⬭" },
+  { id: "plus_size", label: "Plus Size", desc: "Fuller figure, larger build overall", icon: "🌸" },
+  { id: "custom", label: "None of these fit me", desc: "Describe your body shape in your own words", icon: "✏️" },
+];
+
+const BODY_SHAPES_ANDROGYNOUS = [
+  { id: "rectangle", label: "Straight / Rectangle", desc: "Similar width throughout, minimal curves", icon: "▭" },
+  { id: "hourglass", label: "Hourglass", desc: "Defined waist with balanced upper and lower body", icon: "⧗" },
+  { id: "inverted_triangle", label: "Inverted Triangle", desc: "Broader shoulders, narrower hips", icon: "▽" },
+  { id: "pear", label: "Pear", desc: "Narrower shoulders, wider hips", icon: "🍐" },
+  { id: "plus_size", label: "Plus Size", desc: "Fuller figure, larger build overall", icon: "🌸" },
+  { id: "custom", label: "None of these fit me", desc: "Describe your body shape in your own words", icon: "✏️" },
+];
+
+const getBodyShapes = (gender) => {
+  if (gender === "masculine") return BODY_SHAPES_MASCULINE;
+  if (gender === "androgynous") return BODY_SHAPES_ANDROGYNOUS;
+  return BODY_SHAPES_FEMININE;
+};
+
 const WORKPLACES = [
-  { id: "corporate", label: "Corporate", icon: "🏦" },
+  { id: "corporate", label: "Corporate / Finance", icon: "🏦" },
   { id: "business_casual", label: "Business Casual", icon: "💼" },
   { id: "creative", label: "Creative / Media", icon: "🎨" },
   { id: "tech", label: "Tech / Startup", icon: "💻" },
-  { id: "education", label: "Education / Teaching", icon: "🎓" },
-  { id: "government", label: "Government / Public Sector", icon: "🏛️" },
+  { id: "healthcare", label: "Healthcare / Science", icon: "🏥" },
 ];
 
 const SEASONS = [
@@ -28,13 +52,12 @@ const SEASONS = [
 ];
 
 const GENDERS = [
-  { id: "feminine", label: "Feminine styles" },
-  { id: "masculine", label: "Masculine styles" },
-  { id: "androgynous", label: "Androgynous / Neutral" },
+  { id: "feminine", label: "Feminine styles", icon: "👗" },
+  { id: "masculine", label: "Masculine styles", icon: "👔" },
+  { id: "androgynous", label: "Androgynous / Neutral", icon: "🎭" },
 ];
 
-
-const API_URL = "https://dressright-server.onrender.com";
+const API_URL = "http://localhost:5000";
 
 const STORES = [
   { name: "SHEIN", logo: "S", color: "#000", commission: "10% commission", url: "https://www.shein.com/search?q=" },
@@ -214,8 +237,8 @@ function OutfitAdvisor({ onBack }) {
   const [error, setError] = useState("");
 
   const canProceed = () => {
-    if (step === 0) return !!bodyShape && (bodyShape !== "custom" || customBody.trim().length > 10);
-    if (step === 1) return !!gender;
+    if (step === 0) return !!gender;
+    if (step === 1) return !!bodyShape && (bodyShape !== "custom" || customBody.trim().length > 10);
     if (step === 2) return !!workplace;
     if (step === 3) return !!season;
     return false;
@@ -277,7 +300,7 @@ function OutfitAdvisor({ onBack }) {
             <div style={{ width: `${pct}%`, height: "100%", background: "linear-gradient(90deg, #c8a96e, #e8d4a0)", borderRadius: "2px", transition: "width 0.4s ease" }} />
           </div>
           <div style={{ display: "flex", justifyContent: "space-between", marginTop: "0.4rem" }}>
-            {["Body", "Style", "Work", "Season"].map((l, i) => (
+            {["Style", "Body", "Work", "Season"].map((l, i) => (
               <span key={i} style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", color: i <= step ? "#c8a96e" : "#4a4540" }}>{l}</span>
             ))}
           </div>
@@ -286,12 +309,12 @@ function OutfitAdvisor({ onBack }) {
 
       <div style={{ width: "100%", maxWidth: step === 4 ? "1100px" : "540px", background: "#141210", border: "1px solid #2a2520", borderRadius: "4px", padding: "2rem", transition: "max-width 0.4s ease" }}>
 
-        {step === 0 && (
+        {step === 1 && (
           <div>
             <h2 style={{ fontSize: "1.05rem", fontWeight: "400", marginBottom: "0.3rem", color: "#f0e8d8" }}>What is your body shape?</h2>
             <p style={{ color: "#6a6058", fontSize: "0.8rem", marginBottom: "1.4rem", fontStyle: "italic" }}>Choose the one that feels most like you</p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-              {BODY_SHAPES.map(s => (
+              {getBodyShapes(gender).map(s => (
                 <button key={s.id} onClick={() => setBodyShape(s.id)} style={{ background: bodyShape === s.id ? "#1e1a14" : "transparent", border: bodyShape === s.id ? "1px solid #c8a96e" : "1px solid #2a2520", borderRadius: "3px", padding: "0.85rem 1rem", cursor: "pointer", display: "flex", alignItems: "center", gap: "1rem", color: "#e8e0d0", textAlign: "left", transition: "all 0.2s" }}>
                   <span style={{ fontSize: "1.3rem", width: "2rem", textAlign: "center" }}>{s.icon}</span>
                   <div>
@@ -313,14 +336,15 @@ function OutfitAdvisor({ onBack }) {
           </div>
         )}
 
-        {step === 1 && (
+        {step === 0 && (
           <div>
             <h2 style={{ fontSize: "1.05rem", fontWeight: "400", marginBottom: "0.3rem", color: "#f0e8d8" }}>What's your style preference?</h2>
             <p style={{ color: "#6a6058", fontSize: "0.8rem", marginBottom: "1.4rem", fontStyle: "italic" }}>This helps tailor garment suggestions</p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
               {GENDERS.map(g => (
-                <button key={g.id} onClick={() => setGender(g.id)} style={{ background: gender === g.id ? "#1e1a14" : "transparent", border: gender === g.id ? "1px solid #c8a96e" : "1px solid #2a2520", borderRadius: "3px", padding: "1rem 1.2rem", cursor: "pointer", color: gender === g.id ? "#c8a96e" : "#e8e0d0", fontSize: "0.92rem", textAlign: "left", transition: "all 0.2s" }}>
-                  {g.label}
+                <button key={g.id} onClick={() => setGender(g.id)} style={{ background: gender === g.id ? "#1e1a14" : "transparent", border: gender === g.id ? "1px solid #c8a96e" : "1px solid #2a2520", borderRadius: "3px", padding: "0.85rem 1rem", cursor: "pointer", display: "flex", alignItems: "center", gap: "1rem", color: "#e8e0d0", textAlign: "left", transition: "all 0.2s", width: "100%" }}>
+                  <span style={{ fontSize: "1.5rem", width: "2rem", textAlign: "center" }}>{g.icon}</span>
+                  <span style={{ fontWeight: "600", fontSize: "0.92rem", color: gender === g.id ? "#c8a96e" : "#e8e0d0" }}>{g.label}</span>
                 </button>
               ))}
             </div>
@@ -371,7 +395,7 @@ function OutfitAdvisor({ onBack }) {
                 <div style={{ marginBottom: "1.5rem", borderBottom: "1px solid #2a2520", paddingBottom: "1rem" }}>
                   <div style={{ fontSize: "0.62rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "#c8a96e" }}>Your Style Report</div>
                   <div style={{ fontSize: "0.78rem", color: "#5a5248", marginTop: "0.3rem" }}>
-                    {bodyShape === "custom" ? "Custom Shape" : BODY_SHAPES.find(b => b.id === bodyShape)?.label} · {WORKPLACES.find(w => w.id === workplace)?.label} · {SEASONS.find(s => s.id === season)?.label}
+                    {bodyShape === "custom" ? "Custom Shape" : getBodyShapes(gender).find(b => b.id === bodyShape)?.label} · {WORKPLACES.find(w => w.id === workplace)?.label} · {SEASONS.find(s => s.id === season)?.label}
                   </div>
                 </div>
 
