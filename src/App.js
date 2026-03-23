@@ -37,12 +37,14 @@ const getBodyShapes = (gender) => {
 };
 
 const WORKPLACES = [
-  { id: "corporate", label: "Corporate / Finance", icon: "🏦" },
+  { id: "corporate", label: "Corporate", icon: "🏦" },
   { id: "business_casual", label: "Business Casual", icon: "💼" },
   { id: "creative", label: "Creative / Media", icon: "🎨" },
   { id: "tech", label: "Tech / Startup", icon: "💻" },
-  { id: "healthcare", label: "Healthcare / Science", icon: "🏥" },
+  { id: "education", label: "Education / Teaching", icon: "🎓" },
+  { id: "government", label: "Government / Public Sector", icon: "🏛️" },
 ];
+
 
 const SEASONS = [
   { id: "spring", label: "Spring", icon: "🌸" },
