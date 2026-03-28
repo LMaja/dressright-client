@@ -425,7 +425,7 @@ function OutfitAdvisor({ onBack }) {
         {step < 4 && (
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "2rem" }}>
             {step > 0
-              ? <button onClick={() => setStep(step - 1)} style={{ background: "linear-gradient(135deg, #c8a96e, #e0c888)", border: "none", color: "#0e0d0b", cursor: "pointer", fontSize: "0.75rem", padding: "0.5rem 1.2rem", borderRadius: "25px", fontWeight: "600", letterSpacing: "0.08em", fontFamily: "Georgia, serif" }}>← Back</button>
+              ? <button onClick={() => setStep(step - 1)} style={{ background: "linear-gradient(135deg, #c8a96e, #e0c888)", border: "none", color: "#0e0d0b", cursor: "pointer", fontSize: "0.75rem", padding: "0.5rem 1.2rem", borderRadius: "25px", letterSpacing: "0.08em", fontFamily: "Georgia, serif" }}>← Back</button>
               : <div />
             }
             <button onClick={handleNext} disabled={!canProceed()} style={{
