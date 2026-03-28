@@ -288,7 +288,7 @@ function OutfitAdvisor({ onBack }) {
       `}</style>
 
       <div style={{ textAlign: "center", marginBottom: "2rem", width: "100%", maxWidth: "560px" }}>
-        <button onClick={onBack} style={{ background: "linear-gradient(135deg, #c8a96e, #e0c888)", border: "none", color: "#0e0d0b", cursor: "pointer", fontSize: "0.75rem", fontFamily: "Georgia, serif", marginBottom: "1.5rem", display: "block", padding: "0.5rem 1.2rem", borderRadius: "25px", fontWeight: "600", letterSpacing: "0.08em", marginTop: "-1rem" }}>
+        <button onClick={onBack} style={{ background: "linear-gradient(135deg, #c8a96e, #e0c888)", border: "none", color: "#0e0d0b", cursor: "pointer", fontSize: "0.75rem", fontFamily: "Georgia, serif", marginBottom: "1.5rem", display: "block", padding: "0.5rem 1.2rem", borderRadius: "25px", letterSpacing: "0.08em", marginTop: "-1rem" }}>
           ← Back to Home
         </button>
         <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", color: "#c8a96e", textTransform: "uppercase", marginBottom: "0.4rem" }}>Personal Style Studio</div>
