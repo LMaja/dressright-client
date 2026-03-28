@@ -56,11 +56,12 @@ export default function LandingPage({ onGetStarted, onShop }) {
         </div>
         <button onClick={onGetStarted} style={{
             background: "linear-gradient(135deg, #c8a96e, #e8d4a0, #c8a96e)",
+            
             backgroundSize: "200%", animation: "shimmer 3s ease infinite",
             border: "none", color: "#0a0907", padding: "0.5rem 1.5rem",
             fontFamily: "'Montserrat', sans-serif", fontWeight: "500",
             fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase",
-            cursor: "pointer", borderRadius: "1px",
+            cursor: "pointer", borderRadius: "25px",
           }}>
             Get Started
           </button>
@@ -96,7 +97,7 @@ export default function LandingPage({ onGetStarted, onShop }) {
             background: "linear-gradient(135deg, #c8a96e, #e8d4a0, #c8a96e)", backgroundSize: "200%",
             animation: "shimmer 3s ease infinite", border: "none", color: "#0a0907",
             padding: "1rem 3rem", fontFamily: "'Montserrat', sans-serif", fontWeight: "500",
-            fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", cursor: "pointer", borderRadius: "1px",
+            fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", cursor: "pointer", borderRadius: "25px",
           }}>
             Discover Your Style
           </button>
@@ -205,7 +206,7 @@ export default function LandingPage({ onGetStarted, onShop }) {
           background: "linear-gradient(135deg, #c8a96e, #e8d4a0, #c8a96e)", backgroundSize: "200%",
           animation: "shimmer 3s ease infinite", border: "none", color: "#0a0907",
           padding: "1.1rem 3.5rem", fontFamily: "'Montserrat', sans-serif", fontWeight: "500",
-          fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", cursor: "pointer", borderRadius: "1px",
+          fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", cursor: "pointer", borderRadius: "25px",
         }}>
           Start Styling Now — It's Free
         </button>
