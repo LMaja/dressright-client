@@ -83,7 +83,7 @@ function ShopModal({ outfit, onClose }) {
             <div style={{ fontSize: "1.4rem", fontWeight: "300", color: "#f0e8d8", marginBottom: "0.3rem" }}>{outfit.title}</div>
             <div style={{ fontSize: "0.72rem", color: "#6a6058", fontFamily: "Georgia, serif", fontStyle: "italic" }}>Choose your favourite store to shop this outfit</div>
           </div>
-          <button onClick={onClose} style={{ background: "transparent", border: "1px solid #2a2520", color: "#6a6058", width: "32px", height: "32px", borderRadius: "2px", cursor: "pointer", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>✕</button>
+          <button onClick={onClose} style={{ background: "transparent", border: "1px solid #2a2520", color: "#6a6058", width: "32px", height: "32px", borderRadius: "25px", cursor: "pointer", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>✕</button>
         </div>
 
         {/* Outfit pills */}
@@ -114,7 +114,7 @@ function ShopModal({ outfit, onClose }) {
           </div>
 
           {/* Deals */}
-          <div style={{ background: "#080706", border: "1px solid #1e1c18", borderLeft: "2px solid #c8a96e", borderRadius: "2px", padding: "1rem", marginBottom: "1rem" }}>
+          <div style={{ background: "#080706", border: "1px solid #1e1c18", borderLeft: "2px solid #c8a96e", borderRadius: "25px", padding: "1rem", marginBottom: "1rem" }}>
             <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#c8a96e", fontFamily: "Georgia, serif", marginBottom: "0.6rem" }}>🎁 Current Deals</div>
             {[["⚡", "SHEIN — Up to 80% off sale items"], ["🚚", "ASOS — Free delivery on orders over R800"], ["✨", "H&M — New arrivals every week"], ["💥", "Boohoo — Up to 70% off selected styles"]].map(([icon, deal]) => (
               <div key={deal} style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.72rem", color: "#7a7068", fontFamily: "Georgia, serif", marginBottom: "0.3rem" }}>{icon} {deal}</div>
@@ -191,7 +191,7 @@ function OutfitCard({ outfit, index, gender, bodyShape }) {
           </div>
         )}
 
-        <div style={{ position: "absolute", top: "0.7rem", left: "0.7rem", background: "rgba(14,13,11,0.92)", border: "1px solid #c8a96e", borderRadius: "2px", padding: "0.2rem 0.6rem", fontSize: "0.62rem", letterSpacing: "0.2em", color: "#c8a96e", textTransform: "uppercase", zIndex: 2 }}>
+        <div style={{ position: "absolute", top: "0.7rem", left: "0.7rem", background: "rgba(14,13,11,0.92)", border: "1px solid #c8a96e", borderRadius: "25px", padding: "0.2rem 0.6rem", fontSize: "0.62rem", letterSpacing: "0.2em", color: "#c8a96e", textTransform: "uppercase", zIndex: 2 }}>
           Look {index + 1}
         </div>
       </div>
@@ -209,7 +209,7 @@ function OutfitCard({ outfit, index, gender, bodyShape }) {
             </div>
           ))}
         </div>
-        <div style={{ marginTop: "0.9rem", padding: "0.45rem 0.7rem", background: "#141210", border: "1px solid #2a2520", borderRadius: "2px", fontSize: "0.72rem", color: "#9a8f7e" }}>
+        <div style={{ marginTop: "0.9rem", padding: "0.45rem 0.7rem", background: "#141210", border: "1px solid #2a2520", borderRadius: "25px", fontSize: "0.72rem", color: "#9a8f7e" }}>
           🎨 <span style={{ color: "#c8a96e" }}>Colours:</span> {outfit.colors}
         </div>
 
@@ -288,7 +288,7 @@ function OutfitAdvisor({ onBack }) {
       `}</style>
 
       <div style={{ textAlign: "center", marginBottom: "2rem", width: "100%", maxWidth: "560px" }}>
-        <button onClick={onBack} style={{ background: "linear-gradient(135deg, #c8a96e, #e0c888)", border: "none", color: "#0e0d0b", cursor: "pointer", fontSize: "0.75rem", fontFamily: "Georgia, serif", marginBottom: "1.5rem", display: "block", padding: "0.5rem 1.2rem", borderRadius: "2px", fontWeight: "600", letterSpacing: "0.08em", marginTop: "-1rem" }}>
+        <button onClick={onBack} style={{ background: "linear-gradient(135deg, #c8a96e, #e0c888)", border: "none", color: "#0e0d0b", cursor: "pointer", fontSize: "0.75rem", fontFamily: "Georgia, serif", marginBottom: "1.5rem", display: "block", padding: "0.5rem 1.2rem", borderRadius: "25px", fontWeight: "600", letterSpacing: "0.08em", marginTop: "-1rem" }}>
           ← Back to Home
         </button>
         <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", color: "#c8a96e", textTransform: "uppercase", marginBottom: "0.4rem" }}>Personal Style Studio</div>
@@ -298,8 +298,8 @@ function OutfitAdvisor({ onBack }) {
 
       {step < 4 && (
         <div style={{ width: "100%", maxWidth: "520px", marginBottom: "2rem" }}>
-          <div style={{ background: "#1e1c18", borderRadius: "2px", height: "3px" }}>
-            <div style={{ width: `${pct}%`, height: "100%", background: "linear-gradient(90deg, #c8a96e, #e8d4a0)", borderRadius: "2px", transition: "width 0.4s ease" }} />
+          <div style={{ background: "#1e1c18", borderRadius: "25px", height: "3px" }}>
+            <div style={{ width: `${pct}%`, height: "100%", background: "linear-gradient(90deg, #c8a96e, #e8d4a0)", borderRadius: "25px", transition: "width 0.4s ease" }} />
           </div>
           <div style={{ display: "flex", justifyContent: "space-between", marginTop: "0.4rem" }}>
             {["Style", "Body", "Work", "Season"].map((l, i) => (
@@ -408,13 +408,13 @@ function OutfitAdvisor({ onBack }) {
                 </div>
 
                 {tips && (
-                  <div style={{ background: "#0e0d0b", border: "1px solid #2a2520", borderLeft: "3px solid #c8a96e", borderRadius: "2px", padding: "1.2rem 1.4rem", marginBottom: "1.5rem" }}>
+                  <div style={{ background: "#0e0d0b", border: "1px solid #2a2520", borderLeft: "3px solid #c8a96e", borderRadius: "25px", padding: "1.2rem 1.4rem", marginBottom: "1.5rem" }}>
                     <div style={{ fontSize: "0.62rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "#c8a96e", marginBottom: "0.5rem" }}>Stylist Tips</div>
                     <p style={{ margin: 0, fontSize: "0.83rem", color: "#b0a898", lineHeight: 1.7 }}>{tips}</p>
                   </div>
                 )}
 
-                <button onClick={reset} style={{ background: "linear-gradient(135deg, #c8a96e, #e0c888)", border: "none", color: "#0e0d0b", padding: "0.6rem 1.4rem", borderRadius: "2px", cursor: "pointer", fontSize: "0.78rem", letterSpacing: "0.1em", fontFamily: "Georgia, serif", fontWeight: "600" }}>
+                <button onClick={reset} style={{ background: "linear-gradient(135deg, #c8a96e, #e0c888)", border: "none", color: "#0e0d0b", padding: "0.6rem 1.4rem", borderRadius: "25px", cursor: "pointer", fontSize: "0.78rem", letterSpacing: "0.1em", fontFamily: "Georgia, serif", fontWeight: "600" }}>
                   ← Start Over
                 </button>
               </div>
@@ -425,13 +425,13 @@ function OutfitAdvisor({ onBack }) {
         {step < 4 && (
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "2rem" }}>
             {step > 0
-              ? <button onClick={() => setStep(step - 1)} style={{ background: "linear-gradient(135deg, #c8a96e, #e0c888)", border: "none", color: "#0e0d0b", cursor: "pointer", fontSize: "0.75rem", padding: "0.5rem 1.2rem", borderRadius: "2px", fontWeight: "600", letterSpacing: "0.08em", fontFamily: "Georgia, serif" }}>← Back</button>
+              ? <button onClick={() => setStep(step - 1)} style={{ background: "linear-gradient(135deg, #c8a96e, #e0c888)", border: "none", color: "#0e0d0b", cursor: "pointer", fontSize: "0.75rem", padding: "0.5rem 1.2rem", borderRadius: "25px", fontWeight: "600", letterSpacing: "0.08em", fontFamily: "Georgia, serif" }}>← Back</button>
               : <div />
             }
             <button onClick={handleNext} disabled={!canProceed()} style={{
               background: canProceed() ? "linear-gradient(135deg, #c8a96e, #e0c888)" : "#2a2520",
               border: "none", color: canProceed() ? "#0e0d0b" : "#4a4540",
-              padding: "0.65rem 1.8rem", borderRadius: "2px",
+              padding: "0.65rem 1.8rem", borderRadius: "25px",
               cursor: canProceed() ? "pointer" : "default",
               fontSize: "0.82rem", letterSpacing: "0.08em",
               fontFamily: "Georgia, serif", transition: "all 0.2s",
