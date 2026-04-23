@@ -52,7 +52,7 @@ export default function LandingPage({ onGetStarted, onShop }) {
         backdropFilter: scrolled ? "blur(10px)" : "none",
       }}>
         <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.6rem", fontWeight: "300", letterSpacing: "0.1em" }}>
-          Dress<span style={{ color: "#c8a96e" }}>Right</span>
+          With-<span style={{ color: "#c8a96e" }}>Confidence</span>
         </div>
         <button onClick={onGetStarted} style={{
             background: "linear-gradient(135deg, #c8a96e, #e8d4a0, #c8a96e)",
