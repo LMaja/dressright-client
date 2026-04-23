@@ -292,7 +292,7 @@ function OutfitAdvisor({ onBack }) {
           ← Back to Home
         </button>
         <div style={{ fontSize: "0.65rem", letterSpacing: "0.35em", color: "#c8a96e", textTransform: "uppercase", marginBottom: "0.4rem" }}>Personal Style Studio</div>
-        <h1 style={{ fontSize: "2.2rem", fontWeight: "400", margin: 0, color: "#f0e8d8" }}>Dress<span style={{ color: "#c8a96e" }}>Right</span></h1>
+        <h1 style={{ fontSize: "2.2rem", fontWeight: "400", margin: 0, color: "#f0e8d8" }}>With-<span style={{ color: "#c8a96e" }}>Confidence</span></h1>
         <p style={{ color: "#9a8f7e", fontSize: "0.88rem", marginTop: "0.4rem", fontStyle: "italic" }}>Personalised work outfit advice, tailored to you</p>
       </div>
 
