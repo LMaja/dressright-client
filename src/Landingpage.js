@@ -214,8 +214,8 @@ export default function LandingPage({ onGetStarted, onShop }) {
 
       {/* Footer */}
       <footer style={{ padding: "2rem", borderTop: "1px solid #1e1c18", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
-        <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.2rem", fontWeight: "300", color: "#3a3530" }}>Dress<span style={{ color: "#c8a96e" }}>Right</span></div>
-        <div style={{ fontSize: "0.7rem", color: "#c8a96e", fontFamily: "'Montserrat', sans-serif", letterSpacing: "0.1em" }}>© 2026 DressRight · All Rights Reserved</div>
+        <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.2rem", fontWeight: "300", color: "#3a3530" }}>With-<span style={{ color: "#c8a96e" }}>Confidence</span></div>
+        <div style={{ fontSize: "0.7rem", color: "#c8a96e", fontFamily: "'Montserrat', sans-serif", letterSpacing: "0.1em" }}>© 2026 With-Confidence · All Rights Reserved</div>
       </footer>
     </div>
   );
