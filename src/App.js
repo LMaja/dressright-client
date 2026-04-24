@@ -443,7 +443,7 @@ function OutfitAdvisor({ onBack }) {
       </div>
 
 
-      <p style={{ marginTop: "2rem", fontSize: "0.68rem", color: "#3a3530", letterSpacing: "0.1em" }}>POWERED BY GEMINI AI · POLLINATIONS AI · DRESSRIGHT</p>
+      <p style={{ marginTop: "2rem", fontSize: "0.68rem", color: "#3a3530", letterSpacing: "0.1em" }}>POWERED BY GEMINI AI · POLLINATIONS AI · WITH-CONFIDENCE</p>
     </div>
   );
 }
