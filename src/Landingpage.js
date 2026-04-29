@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
 const testimonials = [
-  { name: "Amara Osei", role: "Marketing Manager", city: "Cape Town", text: "DressRight completely transformed how I get dressed for work. As a pear shape, I never knew what to wear. Now I walk in with total confidence every single day.", initial: "A" },
-  { name: "Priya Naidoo", role: "Creative Director", city: "Johannesburg", text: "I used to spend 30 minutes every morning stressing about outfits. DressRight gave me three perfect looks in seconds. It actually understands my body and my workplace.", initial: "P" },
-  { name: "Sipho Dlamini", role: "Financial Analyst", city: "Pretoria", text: "As a guy working in corporate finance I always struggled with what to wear. DressRight nailed my style perfectly — sharp, professional and effortless.", initial: "S" },
+  { name: "Amara Osei", role: "Marketing Manager", city: "Cape Town", text: "With-Confidence completely transformed how I get dressed for work. As a pear shape, I never knew what to wear. Now I walk in with total confidence every single day.", initial: "A" },
+  { name: "Priya Naidoo", role: "Creative Director", city: "Johannesburg", text: "I used to spend 30 minutes every morning stressing about outfits. With-Confidence gave me three perfect looks in seconds. It actually understands my body and my workplace.", initial: "P" },
+  { name: "Sipho Dlamini", role: "Financial Analyst", city: "Pretoria", text: "As a guy working in corporate finance I always struggled with what to wear. With-Confidence nailed my style perfectly — sharp, professional and effortless.", initial: "S" },
   { name: "Nomvula Khumalo", role: "HR Director", city: "Durban", text: "The outfit cards with real photos make it so easy to visualise. I screenshot them and shop directly. Best investment for my wardrobe and confidence.", initial: "N" },
-  { name: "Thandeka Mokoena", role: "Software Engineer", city: "Sandton", text: "I work in tech and always struggled between looking too casual or too formal. DressRight nailed the balance perfectly for my body type.", initial: "T" },
-  { name: "Lethabo Sithole", role: "Lawyer", city: "Bloemfontein", text: "Elegant, intelligent, and incredibly personalised. DressRight is the personal stylist I always wanted but could never afford.", initial: "L" },
+  { name: "Thandeka Mokoena", role: "Software Engineer", city: "Sandton", text: "I work in tech and always struggled between looking too casual or too formal. With-Confidence nailed the balance perfectly for my body type.", initial: "T" },
+  { name: "Lethabo Sithole", role: "Lawyer", city: "Bloemfontein", text: "Elegant, intelligent, and incredibly personalised. With-Confidence is the personal stylist I always wanted but could never afford.", initial: "L" },
 ];
 
 const steps = [

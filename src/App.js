@@ -121,7 +121,7 @@ function ShopModal({ outfit, onClose }) {
             ))}
           </div>
 
-          <p style={{ fontSize: "0.6rem", color: "#3a3530", fontFamily: "Georgia, serif", textAlign: "center", borderTop: "1px solid #1e1c18", paddingTop: "0.8rem" }}>Shopping through our links supports DressRight at no extra cost to you</p>
+          <p style={{ fontSize: "0.6rem", color: "#3a3530", fontFamily: "Georgia, serif", textAlign: "center", borderTop: "1px solid #1e1c18", paddingTop: "0.8rem" }}>Shopping through our links supports With-Confidence at no extra cost to you</p>
         </div>
       </div>
     </div>
