@@ -59,7 +59,7 @@ const GENDERS = [
   { id: "androgynous", label: "Androgynous / Neutral", icon: "🎭" },
 ];
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://with-confidence-server.onrender.com";
 
 const STORES = [
   { name: "SHEIN", logo: "S", color: "#000", commission: "10% commission", url: "https://www.shein.com/search?q=" },
